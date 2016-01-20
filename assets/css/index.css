@@ -214,7 +214,17 @@ hr.colored {
   color: white;
   text-transform: uppercase;
   font-weight: bold;
-  letter-spacing: 1px; }
+  font-size: 12px; }
+  @media (min-width: 992px) {
+    .navbar-default .navbar-nav li a,
+    .navbar-inverse .navbar-nav li a {
+      font-size: 13px;
+      letter-spacing: 0.5px; } }
+  @media (min-width: 1200px) {
+    .navbar-default .navbar-nav li a,
+    .navbar-inverse .navbar-nav li a {
+      font-size: 16px;
+      letter-spacing: 1px; } }
 
 .navbar-default .navbar-nav li a:hover,
 .navbar-inverse .navbar-nav li a:hover {
@@ -253,8 +263,11 @@ hr.colored {
   outline: none; }
 
 .navbar-header .navbar-brand > img {
-  margin-top: -8px;
-  height: 60px; }
+  height: 50px; }
+  @media (min-width: 768px) {
+    .navbar-header .navbar-brand > img {
+      height: 60px;
+      margin-top: -8px; } }
 
 header {
   position: relative;
@@ -274,6 +287,15 @@ header .intro-content {
   color: white;
   text-align: center;
   position: relative; }
+  header .intro-content .carousel-indicators {
+    position: relative;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    margin-left: -30%;
+    padding-top: 6%;
+    text-align: center;
+    list-style: none; }
 
 header .brand-name {
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -491,6 +513,52 @@ aside.cta-quote span.quote {
 
 .about-carousel .item {
   padding: 15px; }
+  .about-carousel .item #justin p {
+    text-align: center;
+    font-size: 110%;
+    margin-top: 10%; }
+    @media (min-width: 485px) {
+      .about-carousel .item #justin p {
+        font-size: 85%;
+        margin-top: 5%; } }
+    @media (min-width: 1200px) {
+      .about-carousel .item #justin p {
+        font-size: 110%;
+        margin-top: 10%; } }
+  .about-carousel .item .portfolio-hover {
+    position: absolute;
+    width: 92%;
+    height: 94%;
+    padding: 15%;
+    opacity: 0;
+    background: rgba(51, 51, 51, 0.7);
+    color: rgba(255, 255, 255, 0.9);
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s; }
+    @media (min-width: 485px) {
+      .about-carousel .item .portfolio-hover {
+        width: 88%;
+        height: 90%;
+        padding: 10%; } }
+    @media (min-width: 1200px) {
+      .about-carousel .item .portfolio-hover {
+        width: 92%;
+        height: 94%;
+        padding: 15%; } }
+    .about-carousel .item .portfolio-hover p {
+      text-align: left;
+      font-size: 95%;
+      line-height: 2; }
+      @media (min-width: 485px) {
+        .about-carousel .item .portfolio-hover p {
+          font-size: 65%; } }
+      @media (min-width: 1200px) {
+        .about-carousel .item .portfolio-hover p {
+          font-size: 95%; } }
+    .about-carousel .item .portfolio-hover:hover {
+      opacity: 1;
+      z-index: 999999; }
 
 .about-carousel .item .caption {
   padding: 15px;
@@ -1008,6 +1076,8 @@ footer.footer .copyright p.small {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s; }
+  .btn-outline-light .big {
+    font-size: 20px; }
 
 .btn-outline-light:hover,
 .btn-outline-light:focus {
@@ -1022,6 +1092,8 @@ footer.footer .copyright p.small {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s; }
+  .btn-outline-dark .small {
+    font-size: 11px; }
 
 .btn-outline-dark:hover,
 .btn-outline-dark:focus {
