@@ -324,6 +324,8 @@ header .brand-name-subtext {
   font-size: 20px;
   line-height: 20px;
   font-weight: 300;
+  letter-spacing: $title-spacing;
+  text-shadow: $big-title-shadow;
 }
 header img {
   max-width: 150px;
@@ -420,6 +422,7 @@ aside.cta-quote {
   -o-background-size: cover;
   padding: 100px 0;
   text-align: center;
+  text-shadow: $subtitle-shadow;
 }
 aside.cta-quote span.quote {
   display: block;
@@ -586,6 +589,7 @@ aside.cta-quote span.quote {
     p {
       text-align: left;
       font-size: 95%;
+      text-shadow: $subtitle-shadow;
       @media (min-width: 485px) {
         font-size: 65%;
       }
@@ -758,11 +762,13 @@ aside.cta-quote span.quote {
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
+  text-shadow: $subtitle-shadow;
 }
 .portfolio-carousel .item .project-details .project-description {
   display: block;
   font-size: 18px;
   line-height: 18px;
+  text-shadow: $subtitle-shadow;
 }
 .portfolio-carousel .owl-controls {
   margin-top: 0;

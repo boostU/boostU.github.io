@@ -255,7 +255,7 @@ hr.colored {
   .navbar-inverse.navbar-expanded {
     background: transparent;
     border: none;
-    text-shadow: 0px 2px 2px black; } }
+    text-shadow: 0px 3px 3px black; } }
 .navbar a:focus {
   outline: none; }
 
@@ -308,7 +308,9 @@ header .brand-name {
 header .brand-name-subtext {
   font-size: 20px;
   line-height: 20px;
-  font-weight: 300; }
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-shadow: 0px 3px 3px black; }
 
 header img {
   max-width: 150px;
@@ -398,7 +400,8 @@ aside.cta-quote {
   background-size: cover;
   -o-background-size: cover;
   padding: 100px 0;
-  text-align: center; }
+  text-align: center;
+  text-shadow: 0px 1.5px 1.5px black; }
 
 aside.cta-quote span.quote {
   display: block;
@@ -549,6 +552,7 @@ aside.cta-quote span.quote {
     .about-carousel .item .portfolio-hover p {
       text-align: left;
       font-size: 95%;
+      text-shadow: 0px 1.5px 1.5px black;
       line-height: 2; }
       @media (min-width: 485px) {
         .about-carousel .item .portfolio-hover p {
@@ -703,12 +707,14 @@ aside.cta-quote span.quote {
   margin-bottom: 5px;
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 900;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-shadow: 0px 1.5px 1.5px black; }
 
 .portfolio-carousel .item .project-details .project-description {
   display: block;
   font-size: 18px;
-  line-height: 18px; }
+  line-height: 18px;
+  text-shadow: 0px 1.5px 1.5px black; }
 
 .portfolio-carousel .owl-controls {
   margin-top: 0; }
