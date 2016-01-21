@@ -459,6 +459,19 @@ aside.cta-quote span.quote {
   svg {
     margin-top: 6px;
   }
+  .btn {
+    margin-top: 5%;
+    padding: 0px 10px;
+    @media (min-width: 350px) {
+      margin-left: 33%;
+    }
+    @media (min-width: 700px) {
+      margin-left: 43%;
+    }
+    @media (min-width: 800px) {
+      margin-left: 46%;
+    }
+  }
 }
 
 .testimonials {
@@ -559,10 +572,41 @@ aside.cta-quote span.quote {
           font-size: 85%;
           margin-top: 5%;        
         }
+        @media (min-width: 700px) {
+          font-size: 100%;
+          margin-top: 30%;
+        }
+        @media (min-width: 770px) {
+          font-size: 96%;
+          margin-top: -3%;
+        }
         @media (min-width: 1200px) {
           font-size: 110%;
           margin-top: 10%;
         }
+    }
+  }
+  #ahmo {
+    p {
+      text-align: center;
+      font-size: 80%;
+      margin-top: -15%;
+      @media (min-width: 485px) {
+          font-size: 70%;
+          margin-top: -15%;        
+      }
+      @media (min-width: 700px) {
+          font-size: 93%;
+          margin-top: 0%;
+      }
+      @media (min-width: 770px) {
+          font-size: 59%;
+          margin-top: 0%;
+      }
+      @media (min-width: 1200px) {
+          font-size: 90%;
+          margin-top: 0%;
+      }
     }
   }
   .portfolio-hover {
@@ -572,6 +616,16 @@ aside.cta-quote span.quote {
     padding: 15%;
     @media (min-width: 485px) {
       width: 88%;
+      height: 90%;
+      padding: 10%;
+    }
+    @media (min-width: 700px) {
+      width: 91.5%;
+      height: 93.5%;
+      padding: 10%;
+    }
+    @media (min-width: 770px) {
+      width: 87%;
       height: 90%;
       padding: 10%;
     }
@@ -591,6 +645,12 @@ aside.cta-quote span.quote {
       font-size: 95%;
       text-shadow: $subtitle-shadow;
       @media (min-width: 485px) {
+        font-size: 65%;
+      }
+      @media (min-width: 700px) {
+        font-size: 100%;
+      }
+      @media (min-width: 700px) {
         font-size: 65%;
       }
       @media (min-width: 1200px) {
@@ -1060,6 +1120,17 @@ aside.cta-quote span.quote {
     background-attachment: fixed;
   }
 }
+
+#partners {
+  .row {
+    margin-top: 5%;
+    img {
+      display: inline-block;
+      margin: 3% 8% 3% 0%;
+    }
+  }
+}
+
 .floating-label-form-group {
   position: relative;
   margin-bottom: 0;
