@@ -38,7 +38,7 @@ function sendgridEmail($name, $email_address, $phone, $message) {
     $sendgrid = new SendGrid('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');
     $email = new SendGrid\Email();
     $email
-        ->addSmtpapiTo('antoinebungert7@gmail.com')
+        ->addSmtpapiTo('contact@boostucoaching.com')
         ->setFrom('contact@boostucoaching.com')
         ->setSubject('Contact information from landing page')
         ->setText('Salut BoostU')
