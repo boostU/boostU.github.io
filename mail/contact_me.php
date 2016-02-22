@@ -1,4 +1,6 @@
 <?php
+
+require_once "../vendor/autoload.php"; 
 // check if fields passed are empty
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
@@ -14,13 +16,47 @@ $name = $_POST['name'];
 $email_address = $_POST['email'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
-	
-// create email body and send it	
-$to = 'boostucoaching@gmail.com'; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE FORM TO SEND MAIL TO*
-$email_subject = "Website Contact Form:  $name";
-$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-$headers = "From: noreply@boostucoaching.com \n"; // *REPLACE WITH THE EMAIL ADDRESS YOU WANT THE MESSAGE TO BE FROM*
-$headers .= "Reply-To: $email_address";	
-mail($to,$email_subject,$email_body,$headers);
-return true;			
+
+$name = htmlspecialchars($name);
+$email_address = htmlspecialchars($email_address);
+$phone = htmlspecialchars($phone);
+$message = htmlspecialchars($message);
+
+function sendgridEmail($name, $email_address, $phone, $message) {
+    $name = htmlspecialchars($name);
+    $email_address = htmlspecialchars($email_address);
+    $phone = htmlspecialchars($phone);
+    $message = htmlspecialchars($message);
+    $html = "<p>Salut <strong>BoostU</strong>!</p>
+            <p>Vous venez de recevoir un demande d'information:</p> <br>
+            <p><strong>Nom:</strong> " .$name. "</p>
+            <p><strong>Email:</strong> " .$email_address. "</p>
+            <p><strong>Numéro de téléphone:</strong> " .$phone. "</p>
+            <p><strong>Message:</strong><br>" .$message. "</p><br><br>
+            <p style='color: grey;'>Bonne journée !</p>";
+
+    $sendgrid = new SendGrid('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');
+    $email = new SendGrid\Email();
+    $email
+        ->addSmtpapiTo('antoinebungert7@gmail.com')
+        ->setFrom('contact@boostucoaching.com')
+        ->setSubject('Contact information from landing page')
+        ->setText('Salut BoostU')
+        ->setHtml($html);
+    $sendgrid->send($email);
+
+    // Or catch the error
+
+    try {
+        $sendgrid->send($email);
+    } catch(\SendGrid\Exception $e) {
+        echo $e->getCode();
+        foreach($e->getErrors() as $er) {
+            echo $er;
+        }
+    }
+}
+
+sendgridEmail($name, $email_address, $phone, $message);
+
 ?>
