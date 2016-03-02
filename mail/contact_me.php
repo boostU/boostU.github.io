@@ -43,7 +43,6 @@ function sendgridEmail($name, $email_address, $phone, $message) {
         ->setSubject('Contact information from landing page')
         ->setText('Salut BoostU')
         ->setHtml($html);
-    $sendgrid->send($email);
 
     // Or catch the error
 
